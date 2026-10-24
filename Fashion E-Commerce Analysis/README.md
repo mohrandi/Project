@@ -1,3 +1,11 @@
+# Report Preview
+
+<p align="center">
+  <img src="./Data/Fashion_E-Commerce_Analysis.gif" width="900">
+</p>
+
+
+
 # Fashion E-Commerce Analysis
 
 A six-month (January–June) sales analysis of a fashion e-commerce business, covering revenue and order trends, channel performance, category performance, discount effectiveness, new vs existing customer behavior, and top/bottom products. The findings are presented in a slide deck with business recommendations.
