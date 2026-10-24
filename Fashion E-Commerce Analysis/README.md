@@ -1,7 +1,7 @@
 # Report Preview
 
 <p align="center">
-  <img src="./Data/Fashion_E-Commerce_Analysis.gif" width="900">
+  <img src="../Data/Fashion_E-Commerce_Analysis.gif" width="900">
 </p>
 
 
