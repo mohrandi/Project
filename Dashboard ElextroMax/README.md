@@ -264,3 +264,10 @@ IF(_bulanIni = _bulanTerakhir, [cumulative gross profit 2025])
 
 - The analysis **compares 2025 with 2024**; it does not isolate the effect of the discount itself. Volume, pricing, product mix, and promotion length can all differ between years.
 - The +0.47% gap is small, so "slightly higher" is the safest reading rather than a clear improvement.
+
+## Project Files
+
+| File | Description |
+| --- | --- |
+| [`Dashboard Electromax Report.pbix`](Dashboard%20Electromax%20Report.pbix) | Power BI dashboard containing the data model, DAX measures, and visual analysis. |
+| [`ElectroMax.xlsx`](ElectroMax.xlsx) | Raw sales dataset used as the source for the analysis. |
