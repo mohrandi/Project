@@ -2,12 +2,41 @@
 
 An end-to-end BI project: raw sales data cleaned with SQL, modeled as a star schema, and visualized in a Power BI dashboard to answer one business question.
 
-> **Business question:** How did Flash Sale Weekend 2025 gross profit compare with 2024?
-
 <p align="center">
   <img src="../Data/ElectroMax_Dashboard.png" width="900">
 </p>
 
+---
+
+## Key Findings
+
+Flash Sale Weekend 2025 generated a slightly higher gross profit than 2024, primarily driven by **AC**.
+
+| Metric | Value |
+|---|---|
+| Gross Profit 2025 | Rp2.25bn |
+| Gross Profit 2024 | Rp2.24bn |
+| Gross Profit Gap | +Rp10.54M |
+| Gross Profit Growth | +0.47% |
+| Biggest Profit Driver | AC (+Rp38.42M vs 2024) |
+| Biggest Profit Drag | Televisi / TV (-Rp17.92M vs 2024) |
+
+**Gross profit gap by category (2025 vs 2024)**
+
+| Category | Gap |
+|---|---|
+| AC | +Rp38.42M |
+| Kulkas (Refrigerator) | +Rp24.11M |
+| Small Appliance | +Rp1.99M |
+| Water Heater | +Rp0.96M |
+| Microwave | -Rp5.88M |
+| Mesin Cuci (Washing Machine) | -Rp15.57M |
+| Vacuum Cleaner | -Rp15.59M |
+| Televisi (TV) | -Rp17.92M |
+
+The overall gain is small because strong results in AC and Kulkas were largely offset by declines in Televisi, Vacuum Cleaner, and Mesin Cuci.
+
+---
 
 ## Dashboard Features
 
@@ -191,6 +220,37 @@ FROM dim_waktu;
 
 ---
 
+## DAX Highlights
+
+**Cumulative (running total) gross profit.** Each month shows the total from January up to that month, so the line never drops and ends at the full-period total.
+
+```dax
+cumulative gross profit 2025 =
+VAR _bulanIni = MAX('clean_dim_waktu'[nomor_bulan])
+RETURN
+CALCULATE(
+    [Gross Profit Flash Sale],
+    FILTER(
+        ALLSELECTED('clean_dim_waktu'),
+        'clean_dim_waktu'[nomor_bulan] <= _bulanIni
+    )
+)
+```
+
+The 2024 line uses the same logic with `[Gross Profit Flash Sale Previous]`.
+
+**End-of-line label.** Returns a value only in the last month, so the data label and marker appear at the end of the line and nowhere else.
+
+```dax
+label total 2025 =
+VAR _bulanTerakhir = CALCULATE(MAX('clean_dim_waktu'[nomor_bulan]), ALLSELECTED('clean_dim_waktu'))
+VAR _bulanIni = MAX('clean_dim_waktu'[nomor_bulan])
+RETURN
+IF(_bulanIni = _bulanTerakhir, [cumulative gross profit 2025])
+```
+
+---
+
 ## Design Decisions
 
 - **Headline is the question.** The dashboard title is the business question, and the KPI cards answer it directly.
@@ -204,5 +264,3 @@ FROM dim_waktu;
 
 - The analysis **compares 2025 with 2024**; it does not isolate the effect of the discount itself. Volume, pricing, product mix, and promotion length can all differ between years.
 - The +0.47% gap is small, so "slightly higher" is the safest reading rather than a clear improvement.
-
-
