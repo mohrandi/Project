@@ -206,5 +206,3 @@ FROM dim_waktu;
 - The +0.47% gap is small, so "slightly higher" is the safest reading rather than a clear improvement.
 
 
-
-[GitHub Portfolio](https://github.com/hackerone432-commits/Data_Analyst)
