@@ -84,7 +84,6 @@ The top 10 are dominated by Handbags (led by Handbags Tesse 41 at Rp299.7M). The
 | --- | --- |
 | [`Fashion_E-Commerce_Analysis_Report.pptx`](Fashion_E-Commerce_Analysis_Report.pptx) | Analysis deck (English), 8 slides with native charts |
 | [`Fashion_E-Commerce_Analysis.xlsx`](Fashion_E-Commerce_Analysis.xlsx) | Source workbook that feeds the deck's charts |
-| [`Fashion_E-Commerce_Analysis.gif`](../Data/Fashion_E-Commerce_Analysis.gif) | Animated preview of the report |
 
 ## Tools
 
