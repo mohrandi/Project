@@ -1,11 +1,15 @@
+# Dashboard Preview
+
+<p align="center">
+  <img src="../Data/Dashboard_excel.gif" width="900">
+</p>
+
+
 # Sales Target and Margin Analysis Dashboard
 
 A Data Analyst portfolio project. An interactive Excel dashboard (Power Query, Power Pivot, DAX) that tracks target attainment and margin for a distributor of everyday goods with 12 branches across Java Island.
 
 > **Note:** all data is **synthetic** (created for practice). Company, branch, store, salesperson, and product brand names are fictional. The findings below apply to this data only, not to a real company.
-
-![Target Analysis Page](screenshots/halaman-1-target-analisis.png)
-![Margin Analysis Page](screenshots/halaman-2-margin-analisis.png)
 
 ---
 
