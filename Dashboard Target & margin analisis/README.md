@@ -304,22 +304,11 @@ All the points above are hypotheses drawn from sales data patterns. The exact ca
 
 ---
 
-## Repository structure
+## Project Files
 
-```
-.
-├── README.md
-├── Project 4.xlsm                  # Excel dashboard
-├── data/
-│   └── Penjualan.xlsx              # export of fact and dimension tables
-├── screenshots/
-│   ├── halaman-1-target-analisis.png
-│   └── halaman-2-margin-analisis.png
-└── assets/
-    └── demo.gif                    # recording of the dashboard in use
-```
-
-Sheets inside the Excel file: `Target` (page 1), `Margin` (page 2), and `Detail` (the pivot that feeds the charts).
+| File | Description |
+| --- | --- |
+| [`Project 4.xlsm`](Project%204.xlsm) | Excel dashboard (Power Query, Power Pivot, DAX, VBA), 2 pages: Target Analysis and Margin Analysis |
 
 ## How to use
 
