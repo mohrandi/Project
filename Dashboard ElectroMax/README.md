@@ -62,12 +62,12 @@ The overall gain is small because strong results in AC and Kulkas were largely o
 
 Star schema with `fact_penjualan` (sales transactions) at the center.
 
-| Table | Role | Key columns |
-|---|---|---|
-| `fact_penjualan` | Fact | `kuantitas`, `harga_satuan`, `total_harga`, `diskon_persen`, `diskon_nominal`, `total_neto`, `hpp`, `gross_profit`, `metode_bayar`, `status_transaksi` |
-| `dim_produk` | Dimension | `produk_id`, `nama_produk`, `kategori`, `subkategori`, `merek`, `harga_normal`, `harga_pokok` |
-| `dim_promosi` | Dimension | `promosi_id`, `nama_promosi`, `tipe_promosi`, `nilai_diskon_pct`, `tgl_mulai`, `tgl_selesai` |
-| `dim_waktu` | Dimension | `waktu_id`, `tanggal`, `bulan`, `nomor_bulan`, `kuartal`, `tahun`, `is_weekend` |
+| Table | Role | Total Rows | Key columns |
+|---|---|---|---|
+| `fact_penjualan` | Fact | 56748 | `kuantitas`, `harga_satuan`, `total_harga`, `diskon_persen`, `diskon_nominal`, `total_neto`, `hpp`, `gross_profit`, `metode_bayar`, `status_transaksi` |
+| `dim_produk` | Dimension | 30 | `produk_id`, `nama_produk`, `kategori`, `subkategori`, `merek`, `harga_normal`, `harga_pokok` |
+| `dim_promosi` | Dimension | 18 | `promosi_id`, `nama_promosi`, `tipe_promosi`, `nilai_diskon_pct`, `tgl_mulai`, `tgl_selesai` |
+| `dim_waktu` | Dimension | 1096 | `waktu_id`, `tanggal`, `bulan`, `nomor_bulan`, `kuartal`, `tahun`, `is_weekend` |
 
 The fact table also holds keys to customer (`pelanggan_id`), store (`toko_id`), and employee (`karyawan_id`) dimensions.
 
