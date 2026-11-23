@@ -71,6 +71,26 @@ The data is organized as a **star schema** in Google Sheets, then loaded into th
 
 The derived columns in `Fact_Penjualan` (region, salesperson, unit price, total sales, COGS, gross profit) are calculated with formulas from the dimension tables.
 
+## Data Pipeline
+
+From raw data to the numbers on the dashboard, the flow goes through five stages:
+
+```
+Google Sheets (9 tables: facts + dimensions, shared via link)
+        |
+        v
+Power Query (Get Data > From Web, .xlsx export link, set data types, load to Data Model)
+        |
+        v
+Data Model / Power Pivot (star schema relationships + DAX measures)
+        |
+        v
+PivotTable + PivotChart + Slicer (chart source for the dashboard)
+        |
+        v
+Excel Dashboard (Target Analysis and Margin Analysis pages)
+```
+
 ### Main relationships
 
 ```
